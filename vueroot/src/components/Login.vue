@@ -12,6 +12,7 @@
 </template>
 
 <script>
+    import { getToken } from './../api/index.js'
     export default {
         data() {
             return {
@@ -22,25 +23,14 @@
         },
         methods: {
             async submitForm() {
-                try {
-                    const response = await fetch('http://localhost:8000/auth/token/', {
-                        method: 'POST',
-                        mode: 'cors',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            username: this.usuario,
-                            password: this.senha
-                        })
-                    }).then((response => {
-                        if (response.ok) {
-                            this.logado = true
-                        }
-                    }))
-                } catch(error) {
-                    console.log(error)
-                }
+                getToken({
+                    usuario: this.usuario,
+                    senha: this.senha
+                }).then((response => {
+                    if (response.ok) {
+                        this.logado = true
+                    }
+                }))
             }
         }   
     }
