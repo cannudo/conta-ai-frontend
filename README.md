@@ -4,20 +4,8 @@ Frontend do projeto CONTA[AI]
 ## Atualmente
 Atualmente o projeto está com uma instância Vue quase limpa.
 
-## Rodar servidor
-Para rodar o servidor, você pode rodar o script `rodar-servidor`:
-
-```console
-source assets/script/rodar-front.sh --install-node-modules
-```
-
-### Ajuda para o script
-Para receber uma ajuda com o script e entender o que ele faz, rode:
-
-
-```console
-source assets/script/rodar-front.sh --help
-```
+## Assets
+Para tentar agilizar o processo de desenvolvimento, há uma série de scripts na pasta [assets/scripts/](assets/scripts/) que automatizam algumas tarefas comuns ao ambiente de desenvolvimento.
 
 ## Protótipos de interface
 
