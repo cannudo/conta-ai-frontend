@@ -9,6 +9,7 @@
     </form>
 
     <p>Logado? {{ logado }}</p>
+    <p>Token {{ token }}</p>
 </template>
 
 <script>
@@ -18,20 +19,26 @@
             return {
                 usuario: 'luan',
                 senha: 'luan',
-                logado: false
+                logado: false,
+                token: ''
             }
         },
         methods: {
             async submitForm() {
-                getToken({
-                    usuario: this.usuario,
-                    senha: this.senha
-                }).then((response => {
-                    if (response.ok) {
-                        this.logado = true
-                    }
-                }))
-            }
+                try {
+                    const response = await getToken({
+                        usuario: this.usuario,
+                        senha: this.senha
+                    });
+                    const conteudo = JSON.parse(await response.text());
+                    this.logado = true
+                    this.token = conteudo.token
+                    
+                } catch (error) {
+                    console.error(error);
+                }
+        }
+
         }   
     }
 </script>
