@@ -13,7 +13,7 @@
 </template>
 
 <script>
-    import { getToken } from './../api/index.js'
+    import { getToken, getToken2 } from './../api/index.js'
     export default {
         data() {
             return {
@@ -26,19 +26,12 @@
         methods: {
             async submitForm() {
                 try {
-                    const response = await getToken({
-                        usuario: this.usuario,
-                        senha: this.senha
-                    });
-                    const conteudo = JSON.parse(await response.text());
+                    this.token = await getToken2(this.usuario, this.senha)
                     this.logado = true
-                    this.token = conteudo.token
-                    
-                } catch (error) {
-                    console.error(error);
+                } catch(error) {
+                    console.log(error);
                 }
-        }
-
+            }
         }   
     }
 </script>
