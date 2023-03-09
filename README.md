@@ -4,8 +4,10 @@ Frontend do projeto CONTA[AI]
 ## Atualmente
 Atualmente o projeto está com uma instância Vue quase limpa.
 
-## Assets
-Para tentar agilizar o processo de desenvolvimento, há uma série de scripts na pasta [assets/scripts/](assets/scripts/) que automatizam algumas tarefas comuns ao ambiente de desenvolvimento.
+## Início rápido
+Para tentar agilizar o processo de execução do projeto, há a possibilidade de executar o script [rodar-front.sh](assets/scripts/rodar-front.sh). Ele instala as dependências e tenta iniciar o servidor. Tenha em mente que é preciso que o Node esteja instalado no host hospedeiro.
+
+Também assume que o host esteja executando o [servidor que disponibiliza a API do CONTA[AI]](https://github.com/cannudo/conta-ai).
 
 ## Protótipos de interface
 
