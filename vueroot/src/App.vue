@@ -16,11 +16,8 @@ export default {
 </script>
 
 <style>
-* {
-  color: #183624;
-  background-color: #C1CCC2;
-}
 #app {
-
+  border: 2px solid red;
+  margin: 32px 135px 0px 135px;
 }
 </style>
