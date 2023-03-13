@@ -2,12 +2,3 @@
     background-color: #C1CCC2;
     color: #183624;
 }
-
-@font-face {
-    font-family: 'Courier Prime';
-    src: url('./../../assets/fonts/Courier/CourierPrime-Regular.ttf');
-}
-@font-face {
-    font-family: 'Special Elite';
-    src: url('./../../assets/fonts/Special/SpecialElite-Regular.ttf');
-}

@@ -8,6 +8,7 @@
         <button>Logar</button>
     </form>
 
+    <button></button>
     <p>Logado? {{ logado }}</p>
     <p>Token {{ token }}</p>
 </template>
