@@ -15,7 +15,17 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Courier Prime';
+  src: url('@/assets/fonts/Courier/CourierPrime-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Special Elite';
+  src: url('@/assets/fonts/Special/SpecialElite-Regular.ttf');
+}
+
 #app {
+  font-family: 'Special Elite';
   margin: 32px 135px 0px 135px;
 }
 </style>
