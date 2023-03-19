@@ -6,3 +6,9 @@
 *      o autor tenta descrever o reset de
 *      padding e margin. 
 */
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
