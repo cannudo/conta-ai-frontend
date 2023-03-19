@@ -7,6 +7,10 @@
 *      padding e margin. 
 */
 
+:root {
+    background-color: #C1CCC2;
+    color: #183624;
+}
 
 body {
     margin: 0;
