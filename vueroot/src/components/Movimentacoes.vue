@@ -24,6 +24,7 @@ export default {
             }
             const response = await fetch(url, settings)
             const conteudo = await response.json()
+            this.movimentacoes = conteudo
 
             return conteudo
     } catch (err) {
