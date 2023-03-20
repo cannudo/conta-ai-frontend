@@ -1,6 +1,6 @@
 <template>
   <BarraMenu/>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App" v-show="false"/>
   <Movimentacoes/>
 </template>
 

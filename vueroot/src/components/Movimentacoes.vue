@@ -1,8 +1,11 @@
 <template>
-    <h1>Movimentações</h1>
+    <h2>Movimentações</h2>
     <button @click="get()">botão</button>
 
-    {{ movimentacoes }}
+    <div id="movimentacoesBox">
+      <span v-if="movimentacoes.length === 0">Matriz vazia</span>
+      <span v-else>{{ movimentacoes }}</span>
+    </div>
 </template>
 
 <script>
