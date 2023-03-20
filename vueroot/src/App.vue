@@ -1,17 +1,20 @@
 <template>
   <BarraMenu/>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Movimentacoes/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import BarraMenu from './components/BarraMenu.vue'
+import Movimentacoes from './components/Movimentacoes.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    BarraMenu
+    BarraMenu,
+    Movimentacoes
   }
 }
 </script>
