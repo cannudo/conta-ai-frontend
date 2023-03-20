@@ -33,4 +33,9 @@ export default {
   font-family: 'Special Elite';
   margin: 32px 135px 0px 135px;
 }
+
+h4 {
+  border: 1px solid red;
+  font-size: 24px;
+}
 </style>

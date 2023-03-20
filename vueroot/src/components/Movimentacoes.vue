@@ -3,8 +3,20 @@
     <button @click="get()">botão</button>
 
     <div id="movimentacoesBox">
-      <span v-if="movimentacoes.length === 0">Matriz vazia</span>
-      <span v-else>{{ movimentacoes }}</span>
+      <main v-if="movimentacoes.length === 0">
+        <section>
+          <h4>Adicionar movimentação</h4>
+        </section>
+      </main>
+      <span v-else>
+        <ol>
+          <li v-for="(objeto, index) in movimentacoes" :key="index">
+            <div v-for="(valor, chave) in objeto" :key="chave">
+              {{ chave }}: {{ valor }}
+            </div>
+          </li>
+        </ol>
+      </span>
     </div>
 </template>
 
@@ -20,10 +32,28 @@ export default {
     async get() {
       this.movimentacoes = await getMovimentacoes()
     }
-}
+  }
 }
 </script>
 
 <style scoped>
+    #movimentacoesBox {
+      border: 1px solid purple;
+    }
 
+    h4 {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    main {
+      background-color: pink;
+    }
+    
+    section {
+      background-color: seagreen;
+      width: 270px;
+      height: 528px;
+      margin: 0 auto;
+    }
 </style>
