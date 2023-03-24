@@ -2,22 +2,9 @@
     <h2>Movimentações</h2>
     <button @click="get()">botão</button>
 
-    <div id="movimentacoesBox">
-      <main v-if="movimentacoes.length === 0">
-        <section>
-          <h4>Adicionar movimentação</h4>
-        </section>
-      </main>
-      <span v-else>
-        <ol>
-          <li v-for="(objeto, index) in movimentacoes" :key="index">
-            <div v-for="(valor, chave) in objeto" :key="chave">
-              {{ chave }}: {{ valor }}
-            </div>
-          </li>
-        </ol>
-      </span>
-    </div>
+    <main>
+      main
+    </main>
 </template>
 
 <script>
@@ -25,7 +12,50 @@ import { getMovimentacoes } from '@/api/movimentacoes'
 export default {
   data() {
     return {
-        movimentacoes: []
+        movimentacoes: [
+          {
+            "titulo": "Concurso",
+            "descricao": "Pagamento das duas inscrições para o concurso",
+            "entrada": false,
+            "valor": 170,
+            "data": "2019-06-22"
+          },
+          {
+            "titulo": "Pagamento do estágio",
+            "descricao": "Bolsa recebida",
+            "entrada": true,
+            "valor": 600,
+            "data": "2019-07-05"
+          },
+          {
+            "titulo": "Pgto. Internet",
+            "descricao": "Internet de junho paga",
+            "entrada": false,
+            "valor": 89.90,
+            "data": "2019-07-05"
+          },
+          {
+            "titulo": "Show do Terno Rei",
+            "descricao": "Dessa vez eu vou",
+            "entrada": false,
+            "valor": 45,
+            "data": "2019-07-15"
+          },
+          {
+            "titulo": "Pgto. Camisas do Nathanael",
+            "descricao": "1x de 3x (2x restantes)",
+            "entrada": true,
+            "valor": 20,
+            "data": "2019-07-16"
+          },
+          {
+            "titulo": "Higiene bucal",
+            "descricao": "Escova, creme dental e enxaguante bucal",
+            "entrada": false,
+            "valor": 26,
+            "data": "2019-07-22"
+          },
+      ]
     }
   },
   methods: {
@@ -49,12 +79,6 @@ export default {
 
     main {
       background-color: pink;
-    }
-    
-    section {
-      background-color: seagreen;
-      width: 270px;
       height: 528px;
-      margin: 0 auto;
     }
 </style>
