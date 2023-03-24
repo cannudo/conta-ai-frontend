@@ -9,7 +9,9 @@
       <h2>for m in movimentacoes</h2>
       <p v-for="m in movimentacoes" :key="m.titulo">
         <hr>
-        {{ m }}
+        <span v-for="(meta, chave) in m" :key="meta.titulo">
+          | {{ chave }} --> {{ meta }} | 
+        </span>
       </p>
     </main>
 </template>
