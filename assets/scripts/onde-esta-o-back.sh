@@ -1,1 +1,0 @@
-echo "O backend está em https://github.com/cannudo/conta-ai na tag [prod-2023-05-07]"

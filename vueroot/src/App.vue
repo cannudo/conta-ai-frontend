@@ -20,17 +20,14 @@ export default {
 </script>
 
 <style>
+
 @font-face {
-  font-family: 'Courier Prime';
-  src: url('@/assets/fonts/Courier/CourierPrime-Regular.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Special Elite';
-  src: url('@/assets/fonts/Special/SpecialElite-Regular.ttf');
+  font-family: 'Open Sans';
+  src: url('@/assets/fonts/Open Sans/static/OpenSans/OpenSans-Regular.ttf') format('truetype');
 }
 
 #app {
-  font-family: 'Special Elite';
+  font-family: 'Open Sans';
   margin: 32px 135px 0px 135px;
 }
 
