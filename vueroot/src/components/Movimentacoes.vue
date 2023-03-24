@@ -3,7 +3,14 @@
     <button @click="get()">botão</button>
 
     <main>
-      main
+      <h2>Array de movimentações</h2>
+      <p>{{ movimentacoes }}</p>
+      <br>
+      <h2>for m in movimentacoes</h2>
+      <p v-for="m in movimentacoes" :key="m.titulo">
+        <hr>
+        {{ m }}
+      </p>
     </main>
 </template>
 
@@ -79,6 +86,6 @@ export default {
 
     main {
       background-color: pink;
-      height: 528px;
+      height: auto;
     }
 </style>
