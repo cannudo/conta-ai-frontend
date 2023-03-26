@@ -3,6 +3,11 @@
     <button @click="get()">botão</button>
 
     <main>
+      <div class="movimentacao" v-for="m in movimentacoes" :key="m.titulo">
+        <span v-for="(meta, chave) in m" :key="meta">
+          {{ chave }}: {{ meta }} <br>
+        </span>
+      </div>
       <h2>Array de movimentações</h2>
       <p>{{ movimentacoes }}</p>
       <br>
@@ -12,6 +17,7 @@
         <span v-for="(meta, chave) in m" :key="meta.titulo">
           | {{ chave }} --> {{ meta }} | 
         </span>
+      <hr>
       </p>
     </main>
 </template>
@@ -76,18 +82,15 @@ export default {
 </script>
 
 <style scoped>
-    #movimentacoesBox {
-      border: 1px solid purple;
+    .movimentacao {
+      background-color: #E9EB7F;
+      width: 270px;
+      height: 250px;
+      border: red solid 1px;
     }
 
     h4 {
       text-align: center;
       margin: 0 auto;
-
-    }
-
-    main {
-      background-color: pink;
-      height: auto;
     }
 </style>

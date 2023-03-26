@@ -1,6 +1,4 @@
 <template>
-  <BarraMenu/>
-  <HelloWorld msg="Welcome to Your Vue.js App" v-show="false"/>
   <Movimentacoes/>
 </template>
 
@@ -28,11 +26,7 @@ export default {
 
 #app {
   font-family: 'Open Sans';
-  margin: 32px 135px 0px 135px;
-}
-
-h4 {
-  border: 1px solid red;
-  font-size: 24px;
+  background-color: orange;
+  margin: 0 135px
 }
 </style>
